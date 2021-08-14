@@ -8,6 +8,7 @@ function ArrayChallenge(strArr) {
     );
   }
 
+  // Finds matching values in string
   let values = strArr.map((coord) => coord.match(/\d/g));
 
   //   console.log(values, 'VALUES');
@@ -31,8 +32,8 @@ function ArrayChallenge(strArr) {
   let one = width.forEach((a) => a.forEach((b) => arrW.push(b)));
   let two = height.forEach((a) => a.forEach((b) => arrL.push(b)));
 
-  console.log(arrW, 'ARRW');
-  console.log(arrL, 'ARRL');
+  // console.log(arrW, 'ARRW');
+  // console.log(arrL, 'ARRL');
 
   let finalW = Math.sqrt(
     Math.pow(arrW[0] - arrW[2], 2) + Math.pow(arrW[1] - arrW[3], 2)
