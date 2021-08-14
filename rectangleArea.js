@@ -1,4 +1,4 @@
-// Find the area of a rectangle given x & y coordinates.
+//
 
 function ArrayChallenge(strArr) {
   // Check if passed in correct amount of coordinates
@@ -10,9 +10,12 @@ function ArrayChallenge(strArr) {
 
   let values = strArr.map((coord) => coord.match(/\d/g));
 
+  //   console.log(values, 'VALUES');
   let finalValues = values.map((IntValues) =>
     IntValues.map((val) => parseInt(val))
   );
+
+  //   console.log(finalValues, 'FINAL VALUES');
 
   let width = [finalValues[0], finalValues[1]];
   let height = [finalValues[2], finalValues[3]];
@@ -28,15 +31,15 @@ function ArrayChallenge(strArr) {
   let one = width.forEach((a) => a.forEach((b) => arrW.push(b)));
   let two = height.forEach((a) => a.forEach((b) => arrL.push(b)));
 
-  //   console.log(arrW, 'ARRW');
-  //   console.log(arrL, 'ARRL');
+  console.log(arrW, 'ARRW');
+  console.log(arrL, 'ARRL');
 
   let finalW = Math.sqrt(
-    Math.pow(arrW[0] - arrW[3], 2) + Math.pow(arrW[1] - arrW[2], 2)
+    Math.pow(arrW[0] - arrW[2], 2) + Math.pow(arrW[1] - arrW[3], 2)
   );
 
   let finalL = Math.sqrt(
-    Math.pow(arrL[0] - arrL[3], 2) + Math.pow(arrL[1] - arrL[2], 2)
+    Math.pow(arrW[0] - arrL[0], 2) + Math.pow(arrW[1] - arrL[1], 2)
   );
   //   console.log(finalW, 'FINAL W');
   //   console.log(finalL, 'FINAL L');
